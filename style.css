@@ -7,11 +7,14 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
 }
+/* banner title  */
 .manu{
     width: 1340px;
     height: 800;
     background-color: #2D25A0;
     margin-bottom: 100px;
+    display: grid;
+    /* grid-template-columns: repeat(2 , 1fr); */
 }
 nav{
     display: flex;
@@ -23,25 +26,19 @@ nav ul{
     justify-content: space-between;
     align-items: center;
     width: 1160px;
-    /* margin-top: 15px; */
-    /* height: 50px; */
-    /* border: 2px solid red; */
-}
+   }
 nav ul a{
     text-decoration: none;
     color: white;
    display: inline-block;
-   /* margin-top: 20px;*/
    margin-right: 20px; 
 }
 .login-btn{
-    /* display: inline-block; */
     display: flex;
     align-items: center;
     color: #FFFFFF;
     background-color: #E02C6D;
     padding: 0px 15px;
-    /* width: 123px; */
     height: 44px;
     
 }
@@ -52,12 +49,15 @@ nav ul a{
     font-weight: 700;
     font-size:40px;
     line-height: 80px;
-    /* border: 2px solid rebeccapurple; */
+   
     
 }
 .banner{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
 }
 
 .banner img{
@@ -73,7 +73,11 @@ nav ul a{
         color: white;
         border: none;
     }
-    /* players section */
+    .fas{
+        color: white;
+        font-size: 15px;
+    }
+    /* ----------players section------------ */
     .top-player{
         width: 1050px;
         display: flex;
@@ -85,23 +89,26 @@ nav ul a{
     .players{
         display: grid;
         grid-template-columns: repeat(3 , 1fr);
-        grid-gap: 30px;
-        
+        grid-gap: 30px;        
         
     }
    
     .player{
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
+        padding: 10px;
     }
     .player img{
         width: 100%;
     }
-    /* highlights section  */
+    /*------------- highlights section --------------- */
     .highlights{
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-        /* flex-direction: column; */
+         display: flex;
+        justify-content: center; 
+        margin-top: 100px; 
+        /* display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        margin: auto; */
+        
     }
     .highlight{
         margin-right: 20px;
@@ -116,7 +123,7 @@ nav ul a{
         width: 560px;
         height: 425px;
     }
-    /* footer section  */
+    /*------------- footer section---------------------  */
     footer{
         width: 483px;
         height: 110px;
@@ -134,3 +141,8 @@ nav ul a{
     .social-icon a{
         margin: 10px 15px;
     }
+   @media  only screen and (max-width:688px) {
+       .banner, .players{
+           grid-template-columns: repeat(1, 1fr);
+       }
+   }
